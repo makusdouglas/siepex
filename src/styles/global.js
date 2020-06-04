@@ -16,6 +16,7 @@ export default createGlobalStyle`
    height: 100%;
  }
  body {
+  background: linear-gradient(90deg, #579af7, #3a4dc9);
    -webkit-font-smoothing: antialiased;
    font-family: 'Roboto', sans-serif;
  }

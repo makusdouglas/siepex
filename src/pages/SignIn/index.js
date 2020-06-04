@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import * as Yup from 'yup';
+
+import Events from '../../components/Events';
 import { Form, Input, Select } from '@rocketseat/unform';
+import { Aside } from './styles';
 
 import logo from '../../assets/logoufpa.png';
 
@@ -33,18 +35,26 @@ function SignIn() {
 
   return (
     <>
-      <img src={logo} alt="logo ufpa" />
-      <h1>SIGE</h1>
-      <h2>Sistema de gerenciamento de eventos</h2>
+      <div>
+        <img src={logo} alt="logo ufpa" />
+        <div>
+          <h1>Universidade Federal do Pará</h1>
+          <h2>Campus Castanhal</h2>
+        </div>
+      </div>
 
-      <p>
-        A Coordenadoria acadêmica em consonância com as Coordenadorias de
-        extensão e pesquisa do Campus Universitário de Castanhal, torna público
-        o edital qui normatiza o VIII Simpósio de Iniciação científica e
-        Extensão de Campus Universitário de Castanhal - SIEX.
-      </p>
+      <section>
+        <h1>SIGE - Sistema de gerenciamento de eventos</h1>
 
-      <aside>
+        <p>
+          A Coordenadoria acadêmica em consonância com as Coordenadorias de
+          extensão e pesquisa do Campus Universitário de Castanhal, torna
+          público o edital qui normatiza o VIII Simpósio de Iniciação científica
+          e Extensão de Campus Universitário de Castanhal - SIEX.
+        </p>
+      </section>
+
+      <Aside>
         <h2>Login</h2>
         <Form schema={schema} onSubmit={handleSubmit}>
           <Select
@@ -61,7 +71,9 @@ function SignIn() {
           <button type="submit">Entrar</button>
           <Link to="/register">Ainda não possuo conta</Link>
         </Form>
-      </aside>
+      </Aside>
+
+      <Events />
     </>
   );
 }
