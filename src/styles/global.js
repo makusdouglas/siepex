@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
  *{
@@ -16,7 +17,7 @@ export default createGlobalStyle`
    height: 100%;
  }
  body {
-  background: linear-gradient(90deg, #579af7, #3a4dc9);
+  background: linear-gradient(90deg, #579af7, #3e17a7);
    -webkit-font-smoothing: antialiased;
    font-family: 'Roboto', sans-serif;
  }

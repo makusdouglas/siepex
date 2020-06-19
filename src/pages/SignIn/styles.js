@@ -3,28 +3,44 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Aside = styled.aside`
-  
-    width: 100%;
-    flex: 1;
-    position: absolute;
-    right: 0;
-    top: 20%;
-    margin-right: 10px;
-    max-width: 300px;
+margin: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; 
+  width: 100%;
+  flex: 1;
+  background-color: #fff;
+  /* border-radius: 20px; */
+    
+   
+    hr {
+      display: none;
+      content: '';
+      border: 0;
+      width: 100%;
+      height: 3px;
+      background: #3e17a7;
+      margin: 20px 0;
 
-    > h2 {
-      font-size: 40px;
-      color: #fff;
-      /* color: ${darken(0.1, '#579af7')}; */
     }
+
     form {
-      text-align: center;
       display: flex;
       flex-direction: column;
-
+      width: 100%;
+      min-width: 220px;
+      text-align: center;
+      
+      
+      > h2 {
+        text-align: left;
+        font-size: 32px;
+        color: #3e17a7;
+        /* color: ${darken(0.1, '#579af7')}; */
+      }
       select {
         color: #666;
-        
+        background: rgba(0, 0, 0, 0.03);
         border-radius: 4px;
         height: 44px;
         padding: 5px 4px;
@@ -38,6 +54,7 @@ export const Aside = styled.aside`
       }
       input {
         border: 0;
+        background: rgba(0, 0, 0, 0.03);
         border-radius: 4px;
         height: 44px;
         padding: 5px 4px;
@@ -65,11 +82,11 @@ export const Aside = styled.aside`
 
       }
       a {
-        color: #ddd;
+        color: #666;
         margin-top: 8px;
 
         &:hover{
-          color: #fff;
+          color: #222;
         }
       }
     }
